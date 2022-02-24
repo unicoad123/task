@@ -1,0 +1,95 @@
+<!Doctype html>
+<html>
+    <head>
+    <style>
+    body{
+        background: url('images/sayan-majhi-msvtLRzW8aY-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center ;
+
+    }
+    form{
+        margin-left: 35%;
+        margin-top: 0 auto;
+        width: 30%;
+        text-align: left;
+        padding: 5px;
+        background-color:rgba(0,0,0,0.73);
+        border-color: tomato;
+        border-radius: 5px;
+        border: 3px;
+        color: white;
+
+    }
+    input{
+        height: 25px;
+        width: 95%;
+        border-radius: 3px;
+        border-color:grey;
+        border-top:none;
+        border-left: none;
+        border-right: none;
+        
+        
+    }
+    button{
+        width:98% ;
+        height: 25px;
+        background-color: indianred;
+    }
+    #date1{
+        width:45%;
+        float: left;
+    }
+    #time
+    {
+        width: 45%;
+        height: 24px;
+        float: right;
+    
+    }
+    
+    </style>
+    <script>
+        function myFunction()
+        {
+            let name=document.getElementById("name").value;
+            let mail=document.getElementById("email").value;
+            let phone=document.getElementById("phone").value;
+            let date=document.getElementById("date1").value;
+            let time=document.getElementById("time").value;
+            console.log("Name:"+name)
+            console.log("Emal:"+mail) 
+            console.log("Phone:"+phone)
+            console.log("Appointment Time:"+date+" "+time)
+
+        }
+    </script>
+    </head>
+    <body>
+        <form>
+          
+            <label>Name:</label><br>
+            <input type="text" id="name" required> <br>
+            <br>
+            <label>Email:</label><br>
+            <input type="email" id="email" required><br>
+            <br>
+            <label>Phone:</label><br>
+            <input type="number" id="phone" required><br>
+            <br>
+            <label>Time for Call:</label><br>
+            <input type="date" id="date1" required>
+            <select name="time" id="time" required>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="01:00">01:00</option>
+            </select>
+            <br>
+            <br>
+            <button id="btn1" onclick="myFunction()">Get a Call</button>
+             
+        </form>
+    </body>
+</html>
