@@ -44,3 +44,55 @@ for(var i=0;i<item.length;i++)
 {
     items[i].style.backgroundColor='#f4f4f4';
 }
+----------------------Manipulating DOM-----------------
+var item=document.querySelector('#items');
+console.log(item.parentnode);
+item.parentnode.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.parentElement);
+item.parentElement.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.firstElementChild);
+item.firstElementChild.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.lastChild);
+item.lastChild.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.firstChild);
+item.firstChild.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.lastElementChild);
+item.lastElementChild.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.nextSibling);
+item.nextSibling.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.nextElementSibling);
+item.nextElementSibling.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.previousSibling);
+item.previousSibling.style.backgroundColor='#ccc';
+
+var item=document.querySelector('#items');
+console.log(item.previousElementSibling);
+item.previousElementSibling.style.backgroundColor='#ccc';
+
+var ndiv=document.createElement('div');
+ndiv.classname='Hello';
+ndiv.setAttribute('title','hello');
+var ndivtext=document.createTextNode('Hello');
+ndiv.appendChild('ndivtext);
+console.log(ndiv);
+         
+
+
+
+
