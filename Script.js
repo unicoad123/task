@@ -92,6 +92,21 @@ var ndivtext=document.createTextNode('Hello');
 ndiv.appendChild('ndivtext);
 console.log(ndiv);
          
+-------delete and edit------------------
+
+  itemList.appendChild(li);
+  var editBtn = document.createElement('button');
+  editBtn.className = 'float-left edit';
+  editBtn.appendChild(document.createTextNode('Edit'));
+  li.appendChild(editBtn);
+function removeItem(e){
+  if(e.target.classList.contains('delete')){
+    if(confirm('Are You Sure?')){
+      var li = e.target.parentElement;
+      itemList.removeChild(li);
+    }
+  }
+}
 
 
 
