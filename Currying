@@ -1,0 +1,18 @@
+//Using Bind
+let multiply=function(x,y)
+{
+console.log(x*y);
+}
+let multiplyBytwo=multiply.bind(this,2);
+multiplyByTwo(5);
+let multiplyBytThree(5);
+//using Closure
+let multiply=function(x)
+{
+return function(y)
+{
+console.log(x*y);
+}
+}
+let multiplyByTwo=multiply(2);
+multiplyByTwo(3);
