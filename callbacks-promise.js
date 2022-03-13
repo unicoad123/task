@@ -59,6 +59,28 @@ function createPost(post)
     },0);
 });
 }
+function updateLastUserActivityTime(post)
+{
+    return new Promise((resolve,reject)=>{
+    setTimeout(()=>
+    {
+       let currenttime=new Date();
+       let output='';
+        posts.forEach((post,index)=>{
+            output+=`<li>${post.title} created ${currenttime.getSeconds()}</li>`;
+        });
+        document.body.innerHTML=output;
+        const error=false;
+        if(!error)
+        {
+            resolve();
+        }
+        else{
+            reject('Error: Something went wrong');
+        }
+    },1000);
+});
+}
 function deletePost(post)
 {
     return new Promise((resolve,reject)=>{
@@ -80,11 +102,9 @@ function deletePost(post)
 }
 
 createPost({title:'Post One',body:'This is post one'}).then(getPosts).catch(err=>console.log(err));
-deletePost(posts)
-.then(getPosts)
-.catch(err=>console.log(err));
 createPost({title:'Post Two',body:'This is post two'})
 createPost({title:'Post Three',body:'This is post three'}).then(getPosts).catch(err=>console.log(err));
+updateLastUserActivityTime(posts).then(getPosts).catch(err=>console.log(err));
 deletePost(posts)
 .then(getPosts)
 .catch(err=>console.log(err));
