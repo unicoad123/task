@@ -67,6 +67,7 @@ function addNewLineElement(object) {
     const parentNode=document.getElementById('users1');
     const li=document.createElement('li');
     const btn=document.createElement('button');
+    const edtbtn=document.createElement('button');
     li.appendChild(
       document.createTextNode(`${res.name} - ${res.emailId}`)
     )
@@ -75,12 +76,20 @@ function addNewLineElement(object) {
     btn.innerHTML="Delete";
     //parentNode.appendChild(e);
     li.appendChild(btn);
+    li.appendChild(edtbtn);
     btn.addEventListener("click", () => {
         axios.delete(`https://crudcrud.com/api/d93533bc97274e18b0849629a0df5c2d/appointmentdata/${res._id}`)
         .then(res=>console.log(res))
         .catch(err=>console.log(err));
         li.remove();
     });
-    
+    edtbtn.addEventListener("click", () => {
+      axios.patch(`https://crudcrud.com/api/b2a81540b493413fab5347bd5ffe24eb/${res._id}`)
+      .then(res=>console.log(res))
+      .catch(err=>console.log(err));
+      document.getElementById("name").value = res.name;
+      document.getElementById("email").value = res.emailId;
+      li.remove();
+  });
     parentNode.appendChild(li);
   }
