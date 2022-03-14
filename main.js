@@ -64,12 +64,23 @@ function addNewLineElement(object) {
 
   }
   function showOutput(res) {
-    document.getElementById('users').innerHTML = `
-    <div class="card card-body mb-4">
-      <h5>Name: ${res}</h5>
-    </div>
-    <div class="card card-body mb-4">
-      <h5>Email: ${res}</h5>
-    </div>
-  `;
+    const parentNode=document.getElementById('users1');
+    const li=document.createElement('li');
+    const btn=document.createElement('button');
+    li.appendChild(
+      document.createTextNode(`${res.name} - ${res.emailId}`)
+    )
+    var e = document.createElement("li");
+    e.innerHTML = '<li><i class="fa-solid fa-trash-can"></i></li>';
+    btn.innerHTML="Delete";
+    //parentNode.appendChild(e);
+    li.appendChild(btn);
+    btn.addEventListener("click", () => {
+        axios.delete(`https://crudcrud.com/api/d93533bc97274e18b0849629a0df5c2d/appointmentdata/${res._id}`)
+        .then(res=>console.log(res))
+        .catch(err=>console.log(err));
+        li.remove();
+    });
+    
+    parentNode.appendChild(li);
   }
