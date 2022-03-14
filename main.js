@@ -26,10 +26,13 @@ function f1()
     axios.get('https://crudcrud.com/api/d93533bc97274e18b0849629a0df5c2d/appointmentdata',obj)
     .then((response)=>
     {
-      showOutput(response.data.name)
-      showOutput(response.data.email)})
+      console.log(response)
+      for(var i=0;i<response.data.length;i++)
+      {
+        showOutput(response.data[i])
+      }
+    })
     .catch((err)=>{console.log(err)})
-    addNewLineElement(obj);
 }
 
 }
