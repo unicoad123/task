@@ -3,31 +3,11 @@
 }
 body{
 display: flex;
+background-color: darkcyan;
 align-items: center;
 justify-content: center;
 font-family: "Poppins",sans-serif;
 margin: 0;
 min-height: 100vh;
-}
-
-button{
-    background-color: cadetblue;
-    border: none;
-    color:white;
-    font-family: inherit;
-    padding: 1 rem;
-}
-#container
-{
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-.toast
-{
-    background-color: cadetblue;
-    color: white;
-    padding: 2rem;
-    margin: 3rem;
-    border-radius: 5px;
+font-size: 20px;
 }

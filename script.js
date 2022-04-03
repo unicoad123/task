@@ -1,20 +1,16 @@
-const btn=document.getElementById("btn");
-const container=document.getElementById("container")
-btn.addEventListener("click",()=>
-{
-    createNotification();
-})
-function createNotification()
-{
-    const notif=document.createElement("div");
-    notif.classList.add("toast");
+const text='Sharpener is best for getting into Software Industry💙';
 
-    notif.innerText="This is Toast Notification";
-    container.appendChild(notif);
+let index=0;
 
-    setTimeout(()=>
+function writeText()
+{
+    document.body.innerText=text.slice(0,index);
+    index++;
+
+    if(index>text.length)
     {
-        notif.remove();
-    },3000)
+        index=0;
 
+    }
 }
+setInterval(writeText,100)
