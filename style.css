@@ -11,3 +11,45 @@ margin: 0;
 min-height: 100vh;
 font-size: 20px;
 }
+
+button{
+background-color: thistle;
+color: white;
+padding: 1rem;
+border-radius: 4px;
+border: none;
+font-family: inherit;
+}
+.pop-container
+{
+    position: fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background-color: chocolate;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.pop-container.active{
+display: flex;
+}
+.popup{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px rgb(1,1,1,1);
+    padding: 2rem;
+    width: 300px;
+    position: relative;
+}
+
+.popup button
+{
+    background-color: white;
+    color: darkgrey;
+    font-size: 1.5rem;
+    position: absolute;
+    top:10px;
+    right: 10px;
+}

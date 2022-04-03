@@ -1,16 +1,12 @@
-const text='Sharpener is best for getting into Software Industry💙';
+const open=document.getElementById('btn');
+const close=document.getElementById('close');
+const popup=document.getElementById('container');
 
-let index=0;
-
-function writeText()
+open.addEventListener("click",()=>
 {
-    document.body.innerText=text.slice(0,index);
-    index++;
-
-    if(index>text.length)
-    {
-        index=0;
-
-    }
-}
-setInterval(writeText,100)
+   popup.classList.add('active');
+})
+close.addEventListener("click",()=>
+{
+    popup.classList.remove('active');
+})
