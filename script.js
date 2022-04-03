@@ -1,12 +1,5 @@
-const open=document.getElementById('btn');
-const close=document.getElementById('close');
-const popup=document.getElementById('container');
-
-open.addEventListener("click",()=>
+const toggle=document.getElementById('toggle');
+toggle.addEventListener("change",(e)=>
 {
-   popup.classList.add('active');
-})
-close.addEventListener("click",()=>
-{
-    popup.classList.remove('active');
+    document.body.classList.toggle("dark",e.target.checked);
 })
