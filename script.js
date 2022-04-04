@@ -1,16 +1,19 @@
-const imgs=document.getElementById('imgs');
-const img=document.querySelectorAll("#imgs img");
-let index=0;
-function run()
-{
-    index++;
-    if(index>img.length-1)
-    {
-        index=0;
-    }
-    imgs.style.transform=`translateX(${-index*500}px)`;
+const container=document.getElementById("container");
+const img=document.querySelector("img");
 
- 
-    
-}
-setInterval(run,2000);
+container.addEventListener("mousemove",(e)=>
+{
+    const x=e.clientX-e.target.offsetLeft;
+    const y=e.clientY-e.target.offsetTop;
+
+    console.log(x,y);
+
+    img.style.transformOrigin=`${x}px ${y}px`;
+    img.style.transform="scale(2)";
+});
+
+container.addEventListener("mouseleave",()=>
+{
+    img.style.transformOrigin="center center";
+    img.style.transform="scale(1)";
+})
