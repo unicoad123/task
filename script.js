@@ -111,4 +111,10 @@ window.addEventListener(`DOMContentLoaded`,() => {
         
         })
 
-
+       function addToCart(productId) {
+    console.log(productId);
+    axios.post(`http://localhost:3000/cart`,{productId:productId})
+    .then(response => {
+        console.log(response);
+    }).catch(error => {console.log(error);})
+}
