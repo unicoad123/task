@@ -1,43 +1,44 @@
-const cart_items = document.querySelector('#cart .cart-items');
+const open=document.getElementById('cart-hldr');
+const close=document.getElementById('close');
+const popup=document.getElementById('cart');
 
+const cartdetail=document.getElementById('cart-details');
+const contaier=document.getElementById("E-Commerce");
 
-const Container = document.getElementById('EcommerceContainer');
-
-
-Container.addEventListener('click',(e)=>
+open.addEventListener("click",()=>
 {
-    if (e.target.className=='shop-item-button'){
-        const id = e.target.parentNode.parentNode.id
-        const name = document.querySelector(`#${id} h3`).innerText;
-        const img_src = document.querySelector(`#${id} img`).src;
-        const price = e.target.parentNode.firstElementChild.firstElementChild.innerText;
-        let total_cart_price = document.querySelector('#total-value').innerText;
-        if (document.querySelector(`#in-cart-${id}`))
-        {
-            alert('This item is already added to the cart');
-            return
-        }
-        document.querySelector('.cart-number').innerText = parseInt(document.querySelector('.cart-number').innerText)+1
-        const cart_item = document.createElement('div');
-        cart_item.classList.add('cart-row');
-        cart_item.setAttribute('id',`in-cart-${id}`);
-        total_cart_price = parseFloat(total_cart_price) + parseFloat(price)
-        total_cart_price = total_cart_price.toFixed(2)
-        document.querySelector('#total-value').innerText = `${total_cart_price}`;
-        cart_item.innerHTML = `
-        <span class='cart-item cart-column'>
-        <img class='cart-img' src="${img_src}" alt="">
-            <span>${name}</span>
-    </span>`
-    const container = document.getElementById('container');
-        const notification = document.createElement('div');
-        notification.classList.add('notification');
-        notification.innerHTML = `<h4>Your Product : <span>${name}</span> is added to the cart<h4>`;
-        container.appendChild(notification);
-        setTimeout(()=>{
-            notification.remove();
-        },2500)
-}
-    
+   popup.classList.add('active')
 })
+close.addEventListener("click",()=>
+{
+    popup.classList.remove('active');
+})
+
+contaier.addEventListener('click',(e)=>
+{
+    if (e.target.className=='butn'){
+        const id = e.target.parentNode.parentNode.id
+        alert(id);
+        const name = document.querySelector(`#${id} h1`).innerText;
+        alert(name);
+        const img_src = document.querySelector(`#${id} img`).src;
+        const price = e.target.parentNode.firstElementChild.innerText;
+        alert(price);
+
+        var image=document.createElement('img');
+        image.setAttribute("class","img1");
+        image.src=img_src;
+        cartdetail.appendChild(image);
+        
+        var inpt=document.createElement('h4');
+        inpt.innerText=price
+        inpt.setAttribute("class","input1");
+        cartdetail.appendChild(inpt);
+
+        alert("Added To Cart Successfully");
+
+    }
+})
+
+
 

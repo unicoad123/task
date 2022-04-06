@@ -1,16 +1,134 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-        <title>Image Zoomer</title>
-        <link rel="stylesheet" href="style.css"/>
-        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <title>E-Commerce</title>
     </head>
     <body>
-        <div id="container">
-            <img src="https://images.unsplash.com/photo-1617906121854-0f6dc6429f52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3B
-            pYy1mZWVkfDQ2fGJvOGpRS1RhRTBZfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="">
+        <div id="E-Commerce">
+            <header>
+                <div id="nav-items">
+                 <ul>
+                     <li>
+                       <a href="./home.html">HOME</a>
+                     </li>
+                     <li>
+                         <a href="./product.html">PRODUCTS</a>
+                     </li>
+                     <li>
+                         <a href="./about.html">ABOUT</a>
+                     </li>
+                     <button href="#display-cart" class="cart-holder" id="cart-hldr">cart</button>
+                     <span class='cart-number'>0</span>
+                 </ul>
+                 </div>
+            </header>
+            <div id="heading">
+                <h1>THE GENERICS</h1>
+           </div>
+                 <section id="items">
+                    <h1>MUSIC</h1>
+                     <div id="music">
+                        <div id="Album1" class="Album">
+                            <h1>Album1</h1>
+                            <div id="image">
+                                <img src="../images/album1.jpg" alt="">
+                            </div>
+                            <div id="details">
+                                <span id="price">$19.99</span>
+                                <button class="butn" id="btn">Add To Cart</button>
+                            </div>
+                            
+                        </div>
+                        <div id="Album2" class="Album">
+                            <h1>Album2</h1>
+                            <div id="image">
+                                <img src="../images/album2.jpg" alt="">
+                            </div>
+                            <div id="details">
+                                <span id="price">$19.99</span>
+                                <button class="butn" id="btn">Add To Cart</button>
+                            </div>
+                        </div>
+                        <div id="Album3" class="Album">
+                            <h1>Album3</h1>
+                            <div id="image">
+                                <img src="../images/album3.jpg" alt="">
+                            </div>
+                            <div id="details">
+                                <span id="price">$19.99</span>
+                                <button class="butn" id="btn">Add To Cart</button>
+                            </div>
+                        </div>
+                        <div class="Album" id="Album4">
+                            <h1>Album4</h1>
+                            <div id="image">
+                                <img src="../images/album4.jpg" alt="">
+                            </div>
+                            <div id="details">
+                                <span id="price">$19.99</span>
+                                <button class="butn" id="btn">Add To Cart</button>
+                            </div>
+                        </div>
+                     </div>
+                     <h1>MERCH</h1>
+                     <div id="merch">
+                        <div class="Album" id="Album5">
+                            <h1>T-Shirt</h1>
+                            <div id="image">
+                                <img src="../images/tshirt.jpg" alt="">
+                            </div>
+                            <div id="details">
+                                <span id="price">$19.99</span>
+                                <button class="butn" id="btn">Add To Cart</button>
+                            </div>
+                            
+                        </div>
+                        <div class="Album" id="Album6">
+                            <h1>Coffee-cup</h1>
+                            <div id="image">
+                                <img src="../images/coffeecup.jpg" alt="">
+                            </div>
+                            <div id="details">
+                                <span id="price">$19.99</span>
+                                <button class="butn" id="btn">Add To Cart</button>
+                            </div>
+                        </div>                    
+                 </section>
+                 <div class="display-cart" id="cart">
+                    <div class="cart1">
+                        <button class="cancel-btn" id="close">X</button>
+                        <div id="cart-details">
+                            
+                        </div>
+                        <h2>Subtotal</h2>
+                        <div id="cart-op">
+                            <button>
+                                GO TO CART
+                            </button>
+                            <button>
+                                CHECKOUT
+                            </button>
+                        </div>
+                        <div>CONTINUE SHOPPING</div>
+                 </div>
+                           </div>
+                 </div>
+    
+                 <footer>
+                     <h1>
+                         The Generics
+                     </h1>
+                     <ul>
+                         <li>Youtube</li>
+                         <li>Spotify</li>
+                         <li>Facebook</li>
+                     </ul>
+                 </footer>
         </div>
+        
     </body>
+    <script src="./script.js"></script>
 </html>
