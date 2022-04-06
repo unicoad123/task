@@ -118,3 +118,9 @@ window.addEventListener(`DOMContentLoaded`,() => {
         console.log(response);
     }).catch(error => {console.log(error);})
 }
+function getCartDetails() {
+    axios.get(`http://localhost:3000/cart`)
+    .then((response)=>{
+        console.log(response);
+    }).catch((error)=>{console.log(error);})
+}
